@@ -1,11 +1,12 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 5s linear;
   height: 200px;
-  z-index: -1;
+  position: relative;
+  z-index: 1;
 }
 
 .App-header {
@@ -22,4 +23,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#welcome {
+  position: relative;
+  z-index: 2;
 }
