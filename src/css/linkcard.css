@@ -1,0 +1,45 @@
+.link-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  /*align-items: center;*/
+}
+
+.link {
+  max-width: 300px;
+  margin: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.link:hover {
+  transform: scale(1.05);
+}
+
+#welcome {
+  position: relative;
+  z-index: 2;
+}
+
+#fork {
+  max-width: 100%;
+  height: auto;
+}
+
+.title:hover {
+  color: #72baaa;
+}
+
+.url:hover{
+  color: #72baaa;
+}
+
+.edit {
+  text-align: right;
+  margin: 0px 9px 6px 0px;
+}
+
+.edit:hover {
+  color: #72baaa;
+}

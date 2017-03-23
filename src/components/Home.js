@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import fork from '../fork.jpg'
 import '../css/App.css';
 import '../css/animista.css';
 import '../css/home.css';
 import { Link } from 'react-router-dom'
+import LinkCard from './LinkCard'
 import { fetchUsername } from '../actions'
 
 class Home extends Component {
@@ -91,33 +91,11 @@ class Home extends Component {
       <div className="Home">
         <h2 id="date">{this.showDate()}</h2>
         <div className="link-wrapper">
-
-          <div className="link" alt="link">
-            <img src={fork} id="fork" />
-            <h3>Example Link</h3>
-            <p className="url">www.exampleurl.com</p>
-          </div>
-          <div className="link" alt="link">
-            <img src={fork} id="fork" />
-            <h3>Example Link</h3>
-            <p className="url">www.exampleurl.com</p>
-          </div>
-          <div className="link" alt="link">
-            <img src={fork} id="fork" />
-            <h3>Example Link</h3>
-            <p className="url">www.exampleurl.com</p>
-          </div>
-          <div className="link" alt="link">
-            <img src={fork} id="fork" />
-            <h3>Example Link</h3>
-            <p className="url">www.exampleurl.com</p>
-          </div>
-          <div className="link" alt="link">
-            <img src={fork} id="fork" />
-            <h3>Example Link</h3>
-            <p className="url">www.exampleurl.com</p>
-          </div>
-
+          <LinkCard />
+          <LinkCard />
+          <LinkCard />
+          <LinkCard />
+          <LinkCard />
         </div>
       </div>
     );
