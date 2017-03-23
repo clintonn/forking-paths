@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 5s linear;
+  /*animation: App-logo-spin infinite 5s linear;*/
   height: 200px;
   position: relative;
   z-index: 1;
@@ -23,9 +23,4 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-#welcome {
-  position: relative;
-  z-index: 2;
 }

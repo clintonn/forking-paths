@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import fork from '../fork.jpg'
 import '../css/App.css';
+import '../css/animista.css';
+import '../css/home.css';
 import { Link } from 'react-router-dom'
 import { fetchUsername } from '../actions'
 
@@ -12,17 +14,111 @@ class Home extends Component {
     this.props.fetchUsername()
   }
 
+  showDate() {
+    var today = new Date()
+    var day = today.getDay();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+
+    switch (mm) {
+      case 1:
+        mm = "January"
+        break
+      case 2:
+        mm = "February"
+        break
+      case 3:
+        mm = "March"
+        break
+      case 4:
+        mm = "April"
+        break
+      case 5:
+        mm = "May"
+        break
+      case 6:
+        mm = "June"
+        break
+      case 7:
+        mm = "July"
+        break
+      case 8:
+        mm = "August"
+        break
+      case 9:
+        mm = "September"
+        break
+      case 10:
+        mm = "October"
+        break
+      case 11:
+        mm = "November"
+        break
+      case 12:
+        mm = "December"
+        break
+    }
+
+    switch (new Date().getDay()) {
+      case 0:
+          day = "Sunday";
+          break;
+      case 1:
+          day = "Monday";
+          break;
+      case 2:
+          day = "Tuesday";
+          break;
+      case 3:
+          day = "Wednesday";
+          break;
+      case 4:
+          day = "Thursday";
+          break;
+      case 5:
+          day = "Friday";
+          break;
+      case 6:
+          day = "Saturday";
+    }
+
+    today = day+', '+mm+' '+dd
+    return today;
+  }
+
   render() {
     return (
       <div className="Home">
-        <div className="App-header">
-          <img src={fork} className="App-logo" alt="logo" />
-          <h2 id="welcome">Welcome to Forking Paths, {this.props.username}</h2>
+        <h2 id="date">{this.showDate()}</h2>
+        <div className="link-wrapper">
+
+          <div className="link" alt="link">
+            <img src={fork} id="fork" />
+            <h3>Example Link</h3>
+            <p className="url">www.exampleurl.com</p>
+          </div>
+          <div className="link" alt="link">
+            <img src={fork} id="fork" />
+            <h3>Example Link</h3>
+            <p className="url">www.exampleurl.com</p>
+          </div>
+          <div className="link" alt="link">
+            <img src={fork} id="fork" />
+            <h3>Example Link</h3>
+            <p className="url">www.exampleurl.com</p>
+          </div>
+          <div className="link" alt="link">
+            <img src={fork} id="fork" />
+            <h3>Example Link</h3>
+            <p className="url">www.exampleurl.com</p>
+          </div>
+          <div className="link" alt="link">
+            <img src={fork} id="fork" />
+            <h3>Example Link</h3>
+            <p className="url">www.exampleurl.com</p>
+          </div>
+
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Link to="/login">Go to login page</Link>
       </div>
     );
   }

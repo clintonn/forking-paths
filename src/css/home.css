@@ -1,0 +1,24 @@
+.Home {
+  text-align: center;
+}
+
+.link-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.link {
+  max-width: 300px;
+  margin: 10px;
+}
+
+#welcome {
+  position: relative;
+  z-index: 2;
+}
+
+#fork {
+  max-width: 100%;
+  height: auto;
+}
