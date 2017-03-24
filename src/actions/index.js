@@ -31,11 +31,29 @@ export const logInUser = (user) => {  // call on Rails API to match and decode t
   }
 }
 
+export const logOut = () => {
+  return {
+    type: 'LOG_OUT'
+  }
+}
+
 export const fetchUsername = () => {
   axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
   const response = axios.get('/active')
   return {
     type: 'FETCH_USERNAME',
+    payload: response
+  }
+}
+
+export const fetchLinkData = () => {
+  axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
+  const response = axios.get('/get_links')
+    .then( (linkData) => {
+      return linkData.data
+    })
+  return {
+    type: 'FETCH_LINK_DATA',
     payload: response
   }
 }

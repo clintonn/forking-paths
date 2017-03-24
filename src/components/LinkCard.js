@@ -6,12 +6,30 @@ import '../css/linkcard.css';
 
 class LinkCard extends Component {
 
+  constructor() {
+    super()
+
+    this.state = {
+      title: "Example Title",
+      url: "https://www.exampleurl.com",
+      thumbnail: fork
+    }
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      title: nextProps.linkData.title,
+      url: nextProps.linkData.url,
+      thumbnail: nextProps.linkData.thumbnail
+    })
+  }
+
   render() {
     return (
       <div className="link" alt="link">
-        <img src={fork} id="fork" />
-        <h3 className="title">Example Link</h3>
-        <p className="url">www.exampleurl.com</p>
+        <img src={this.state.thumbnail || fork} className="thumbnail" />
+        <h3 className="title">{this.state.title}</h3>
+        <p className="url">{this.state.url}</p>
         <p className="edit">Edit</p>
       </div>
     );

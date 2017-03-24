@@ -22,13 +22,17 @@
   z-index: 2;
 }
 
-#fork {
+.thumbnail {
   max-width: 100%;
   height: auto;
 }
 
 .title:hover {
   color: #72baaa;
+}
+
+.url {
+  font-size:0.8em;
 }
 
 .url:hover{

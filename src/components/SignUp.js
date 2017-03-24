@@ -24,7 +24,7 @@ class SignUp extends Component {
 
   componentDidUpdate() {
     if (Object.keys(this.props.user).length !== 0) {
-      this.props.history.push('/home')
+      this.props.history.push(`/user/${this.refs.username.value}`)
     }
   }
 
