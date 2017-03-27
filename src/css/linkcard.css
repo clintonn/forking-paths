@@ -1,6 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 .link-wrapper {
-  display: inline-flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 0.4em;
+  /*flex-direction: row;*/
   /*align-items: center;*/
 }
 
@@ -27,6 +33,10 @@
   height: auto;
 }
 
+.thumbnailWrap {
+
+}
+
 .title:hover {
   color: #72baaa;
 }
@@ -46,4 +56,9 @@
 
 .edit:hover {
   color: #72baaa;
+}
+
+.link input {
+  display: block;
+  margin: auto;
 }

@@ -26,7 +26,7 @@
   margin: 12px 6px 20px 6px;
 }
 
-input {
+.myForm input {
   width: 283px;
   height: 31px;
   border: 1px solid #808080;
@@ -39,7 +39,7 @@ input {
   margin-bottom: 20px;
 }
 
-label {
+.myForm label {
   margin-left: 6px;
   font-weight: bold;
   font-size: .85em;
