@@ -38,7 +38,7 @@ class Login extends Component {
             <button className="formButton" type="submit" onClick={this.handleSubmit.bind(this)}>Log In</button>
           </form>
           <div id="newDiv">
-            <p id="new">New to Audio Advocate?</p>
+            <p id="new">New to Forking Paths?</p>
           </div>
           <button className="formButton createButton" onClick={this.handleCreateClick.bind(this)}>Create Account</button>
         </div>

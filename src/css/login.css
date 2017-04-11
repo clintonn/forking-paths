@@ -124,3 +124,9 @@
   color: #008705;
   text-decoration: underline;
 }
+
+/*@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}*/
